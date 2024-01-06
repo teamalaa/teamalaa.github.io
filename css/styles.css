@@ -2278,3 +2278,50 @@ text-align: center;
                             .footer__brand img {
                                 max-width: 204px;
                             }
+
+
+
+                            #payment{text-align: center; margin-top: -2%;}
+
+                            #payment img{width: 45%;
+                                margin: auto;
+                                display: table;}
+
+
+                                    #payment p{
+                                margin: 1rem 0 0rem; color:white!important}
+
+
+                                #payment i{
+                                font-size: 53px!important;
+                                margin-top: 20px;
+                                color: #25D366;}
+
+
+                                .footer {
+                                    padding-top: 8rem;
+                                }
+
+
+                                @media screen and (max-width: 767px) {
+
+                                #payment_secondcol{margin-top: 11%;}
+
+                                #payment{margin-top: -10%;}
+
+                                #payment col{margin-top: -40px;}
+
+                                #payment_firstcol{margin-top: -39px;}
+                                }
+
+
+                                
+                                @media screen and (max-width: 400px) {
+
+                                    #payment_secondcol{margin-top: 15%;}
+                                    }
+    
+
+                                    @media screen and (max-width: 350px) {
+                                        #payment{margin-top: -22%;}
+                                    }

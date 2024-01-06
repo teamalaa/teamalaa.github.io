@@ -59,39 +59,40 @@
         <i class="fa fa-bars icon icon--white nav__toggler" id="menu"></i>
       
         <ul class="list nav__list collapsible__content">
-          <li class="nav__item"><a href="#firsthead-sec">Home </a></li>
+          <li class="nav__item"><a href="#home">Home </a></li>
           <li class="nav__item"><a href="#packages">Packages</a></li>
-          <li class="nav__item"><a href="#aboutcalaa">About </a></li>
-          <li class="nav__item"><a href="#transformations_sec">Transformations</a></li>
-          <li class="nav__item"><a href="#areyouready">Contact</a></li>
+          <li class="nav__item"><a href="#about">About </a></li>
+          <li class="nav__item"><a href="#transformations">Transformations</a></li>
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+          <li class="nav__item"><a href="#payment">Payment</a></li>
 
         </ul>
       </nav>
       
-      <script> 
-      document.addEventListener('DOMContentLoaded', function() {
-        const navLinks = document.querySelectorAll('.nav__list a[href^="#"]');
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const navLinks = document.querySelectorAll('.nav__list a[href^="#"]');
       
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
+          navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
       
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+              const targetName = this.getAttribute('href').substring(1);
+              const targetSection = document.getElementsByName(targetName)[0];
       
-            if (targetSection) {
-              const offsetTop = targetSection.offsetTop;
+              if (targetSection) {
+                const offsetTop = targetSection.offsetTop;
       
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            }
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            });
           });
         });
-      });
-</script>
-      
+      </script>
+            
       <!--
       <section class="block block--dark block--skewed-left hero"  data-aos="fade-in">
         <div class="container grid grid--1x2">
@@ -155,7 +156,7 @@
 
 
 
-      <section class="overlay-section" id="secondsec"> 
+      <section class="overlay-section" id="secondsec" name="home"> 
         <h2>Ignite Your Fitness Journey</h2>
         <p class="hero__tagline">
           Engage in a transformative fitness experience with C.Alaa osman is personalized programs, designed to empower you to reach your wellness goals.</p>
@@ -173,7 +174,7 @@
 
 
      
-      <section class="block container block-plans" data-aos="fade-out" id="packages" name="Packages">
+      <section class="block container block-plans" data-aos="fade-out" id="packages" name="packages">
         <h2> Packages </h2>
         <div class="grid grid--1x3">
           <div class="plan" id="pricing">
@@ -191,7 +192,7 @@
                    <li class="list__item"> <img src="images/tick.png"> Customized nutrition plan. </li>
                    <li class="list__item"> <img src="images/tick.png"> Prompt WhatsApp support.  </li>
                 </ul>
-                <button onclick="window.location.href='second.html'" class="btn btn--outline btn--block">Buy Now</button>
+                <button onclick="window.location.href='payment.html'" class="btn btn--outline btn--block">Buy Now</button>
               </div>
             </div>
           </div>
@@ -215,7 +216,7 @@
                    <li class="list__item"> <img src="images/tick.png"> Healthy recipes book (soon).  </li>
 
                 </ul>
-                <button onclick="window.location.href='second.html'" class="btn btn--outline btn--block">Buy Now</button>
+                <button onclick="window.location.href='payment.html'" class="btn btn--outline btn--block">Buy Now</button>
               </div>
             </div>
           </div>
@@ -240,7 +241,7 @@
                    <li class="list__item"> <img src="images/tick.png"> Monthly call for progress.  </li>
 
                 </ul>
-                <button onclick="window.location.href='second.html'" class="btn btn--outline btn--block">Buy Now</button>
+                <button onclick="window.location.href='payment.html'" class="btn btn--outline btn--block">Buy Now</button>
               </div>
             </div>
           </div>
@@ -250,7 +251,7 @@
 
           
 
-        <section id="aboutcalaa" data-aos="fade-out">
+        <section id="aboutcalaa" data-aos="fade-out" name="about">
 
           <div class="container">
             <div class="row">
@@ -313,7 +314,7 @@
 
 -->
 
-<section class="block block--dark block--skewed-left" data-aos="fade-out" id="transformations_sec">
+<section class="block block--dark block--skewed-left" data-aos="fade-out" id="transformations_sec" name="transformations">
 
 <h2>Transformations</h2>
 
@@ -481,7 +482,7 @@ $(document).ready(function() {
 
 
 
-<section class="block block--dark block--skewed-right" data-aos="fade-out" id="areyouready">
+<section class="block block--dark block--skewed-right" data-aos="fade-out" id="areyouready" name="contact">
   <div class="container">
 
     <div class="row">
@@ -511,6 +512,47 @@ $(document).ready(function() {
 </div>
   </section>
 
+
+
+  <section class="block block--dark block--skewed-left hero"  data-aos="fade-in" id="payment" name="payment">
+
+    <div class="container">
+      <div class="row">
+        <h2> Payment Methods</h2>
+        <br> <br>
+        <div class="col-lg-6 col-md-6 col-sm-6" id="payment_firstcol">
+          <h2 data-aos="fade-down">CIB</h2>
+          <img src="images/cib-cash.png">
+          <p class="hero__tagline">
+            100059306318              </p>
+
+
+        </div>
+
+
+
+
+      <div class="col-lg-6 col-md-6 col-sm-6" id="payment_secondcol">
+        <h2 data-aos="fade-down">Etisalat Cash</h2>
+        <img src="images/etisalat-cash.png">
+        <p class="hero__tagline">
+          01128534672              </p>
+
+
+
+
+    </div>
+  </div>
+
+    <br> <br>  <br> 
+
+
+    <p class="hero__tagline">
+      <span style="color:red"> * </span>Any transfer made must be sent a copy of it on WhatsApp </p>
+
+      <a href="https://wa.me/01128534672" target="_blank">  <i class="fa fa-whatsapp fa-5" aria-hidden="true"></i> </a> 
+
+  </section>
 
 
 
